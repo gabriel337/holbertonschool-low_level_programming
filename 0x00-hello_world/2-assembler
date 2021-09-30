@@ -1,2 +1,2 @@
 #!/bin/bash
-cgg -S $CFILE > c
+cgg -s $CFILE > c
