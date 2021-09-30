@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -save-temps $CFILE
+export CFILE=0-main.c ; ./0-preprocessor
