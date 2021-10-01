@@ -9,8 +9,7 @@
 */
 int main(void)
 {
-int n;
-char lastDigit;
+int n,lastDigit;
 
 lastDigit = n%10;
 
