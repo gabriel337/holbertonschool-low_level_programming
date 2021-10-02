@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
- * main - prints the alphabet in lowercase
+ * main - prints lower case alphabet without q and e letters
  * Return: returns 0
  */
+
 int main(void)
 {
-int x;
-for (x = 'a'; x <= 'z'; x++)
+char al;
+
+for (al = 'a'; al <= 'z'; al++)
 {
-putchar(x);
+putchar (al);
 }
-putchar('\n');
 return (0);
 }
