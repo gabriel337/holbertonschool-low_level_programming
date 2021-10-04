@@ -17,9 +17,9 @@ int main(void)
 			putchar(',');
 
 			putchar(' ');
-
-			putchar(x % 10 + '1');
 		}
+		if (x / 10)
+			putchar(x % 10 + '0');
 	}
 	putchar('\n');
 		return (0);
