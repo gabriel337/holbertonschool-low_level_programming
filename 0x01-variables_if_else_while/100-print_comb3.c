@@ -17,12 +17,10 @@ int main(void)
 			putchar(',');
 
 			putchar(' ');
-		}
 
-		if (x / 2 == 9)
-		{
 			putchar(x++);
 		}
+
 	}
 
 	putchar('\n');
