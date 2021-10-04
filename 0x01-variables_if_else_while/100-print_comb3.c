@@ -6,17 +6,15 @@
  */
 int main(void)
 {
-
-	for (int x = 0; x < 90; x++)
-	{
-	putchar(x);
-
-	putchar(',');
-
-	putchar(' ');
-	}
-
-	putchar('\n');
-
-	return (0);
+int i = 0;
+while (i < 100)
+{
+putchar('0' + i / 10);
+putchar('0' + i % 10);
+putchar(',');
+putchar(' ');
+putchar('\n');
+i++;
+}
+return (0);
 }
