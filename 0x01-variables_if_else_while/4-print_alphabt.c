@@ -11,7 +11,7 @@ char al;
 
 for (al = 'a'; al <= 'z'; al++)
 {
-while ((al == 'e' && al == 'q') || al == '\0')
+if (al != 'q' && al != 'e')
 putchar (al);
 }
 putchar('\n');
