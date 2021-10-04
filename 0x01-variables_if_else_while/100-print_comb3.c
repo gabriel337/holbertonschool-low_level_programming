@@ -18,7 +18,7 @@ int main(void)
 
 			putchar(' ');
 
-			putchar(x + 1);
+			putchar('0' + x / 10);
 		}
 	}
 
