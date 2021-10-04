@@ -18,9 +18,14 @@ int main(void)
 
 			putchar(' ');
 		}
-		if (x * 10)
-			putchar(x * 10 + '0');
+
+		if (x / 2 == 9)
+		{
+			putchar(x++);
+		}
 	}
+
 	putchar('\n');
-		return (0);
+
+	return (0);
 }
