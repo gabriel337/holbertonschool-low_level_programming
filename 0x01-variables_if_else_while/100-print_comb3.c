@@ -12,12 +12,15 @@ int main(void)
 	{
 		for (secondNum = '0'; secondNum <= '9'; secondNum++)
 		{
-			if (firstNum < secondNum)
+			if (firstNum < secondNum && firstNum != secondNum)
 			{
 				putchar(firstNum);
 				putchar(secondNum);
-				putchar(',');
-				putchar(' ');
+				if (!(firstNum == '8' && secondNum == '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 		}
 	}
