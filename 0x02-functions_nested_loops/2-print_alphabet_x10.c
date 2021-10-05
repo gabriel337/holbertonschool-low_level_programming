@@ -1,16 +1,4 @@
-#include <stdio.h>
-
-/**
- * main - calls print_alphabet function
- * Return: returns 0
- */
-void print_alphabet_x10(void);
-int main(void)
-{
-	print_alphabet_x10();
-
-	return (0);
-}
+#include "main.h"
 
 /**
  * print_alphabet_x10 - prints the alphabet 10 times
@@ -27,12 +15,11 @@ void print_alphabet_x10(void)
 		c = 'a';
 		while (c <= 'z')
 		{
-			putchar(c);
+			_putchar(c);
 			c++;
 		}
-		putchar('\n');
+		_putchar('\n');
 		x++;
 	}
-
 }
 
