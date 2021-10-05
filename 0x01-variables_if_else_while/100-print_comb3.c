@@ -6,17 +6,21 @@
  */
 int main(void)
 {
-	int x;
+	int firstNum, secondNum;
 
-	for (x = '0'; x <= '9'; x++)
+	for (firstNum = '0'; firstNum <= '8'; firstNum++)
 	{
-		putchar((x / 10) + '0');
-
-		putchar((x / 10) + '0');
-
+		for (secondNum = '0'; secondNum <= '9'; secondNum++)
+		{
+			if (firstNum < secondNum)
+			{
+				putchar(firstNum);
+				putchar(secondNum);
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
