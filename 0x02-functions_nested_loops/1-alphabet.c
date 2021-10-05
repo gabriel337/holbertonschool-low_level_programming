@@ -1,10 +1,10 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - calls function print_alphabet
  * Return: returns 0
  */
-void print_alphabet(void);
 int main(void)
 {
 	print_alphabet();
@@ -20,7 +20,7 @@ void print_alphabet(void)
 
 	for (x = 'a'; x <= 'z'; x++)
 	{
-		putchar(x);
+		_putchar(x);
 	}
-	putchar('\n');
+	_putchar('\n');
 }
