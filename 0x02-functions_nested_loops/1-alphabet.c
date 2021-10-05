@@ -4,11 +4,6 @@
  * main - calls function print_alphabet
  * Return: returns 0
  */
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
 
 /**
  *print_alphabet - prints the alphabet in lower case
