@@ -6,16 +6,17 @@
  */
 int main(void)
 {
-int i = 0;
-while (i < 100)
-{
-putchar('0' + i / 10);
-putchar('0' + i % 10);
-putchar(',');
-putchar(' ');
-i++;
-}
+	int x;
 
-putchar('\n');
-return (0);
+	for (x = '0'; x <= '9'; x++)
+	{
+		putchar((x / 10) + '0');
+
+		putchar((x / 10) + '0');
+
+	}
+
+	putchar('\n');
+
+	return (0);
 }
