@@ -7,32 +7,43 @@
 char *cap_string(char *str)
 
 {
-	int i, j;
-	char array[] = {',', ';', '.', '!', '?','"', '(', ')' ,'{', '}'};
-	int flag = 1;
+	int i;
 	
-	for (i=0; str[i]!='\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if(flag == 1)
+		if (i == 0)
 		{
-			if(str[i] >= 'a' && str[i] <= 'z')
-			{
-				str[i] = str[i] - 32;
-				
-			}
-			flag = 0;
+			if (str[i] >= 'a' && str[i] <= 'z')
+				str[i] = str[i] - 32; 
+			continue;
 		}
 		
-		for (j = 0; array[j] != '\0'; j++)
+		if(str[i] == ' ')  
 		{
-			if(str[i] == array[j])
+			++i;
+			
+			if(str[i]>='a' && str[i]<='z')
 			{
-				flag = 1;
+				str[i]=str[i]-32;
+				continue;
 			}
+		}
+		
+		else
+		{
+			if(str[i]>='A' && str[i]<='Z')
+				str[i]=str[i]+32;
 		}
 	}
 	return (str);
 }
+
+
+
+
+
+
+
 
 
 
