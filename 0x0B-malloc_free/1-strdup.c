@@ -15,7 +15,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 	{
-	return (NULL);
+		return (NULL);
 	}
 
 	while (str[size])
@@ -25,10 +25,11 @@ char *_strdup(char *str)
 
 	src = (char *)malloc(sizeof(char) * size + 1);
 	p = src;
-if(src == NULL)
-{
-return ((char *) NULL);
-}
+
+	if (src == NULL)
+	{
+		return ((char *) NULL);
+	}
 
 	while (*str)
 	{
