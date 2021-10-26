@@ -17,18 +17,20 @@ char *_strdup(char *str)
 	{
 	return (NULL);
 	}
+
 	while (str[size])
 	{
 		size++;
 	}
 
-	src = malloc(size + 1);
-
+	src = malloc(sizeof(char *) + 1);
 	p = src;
+
 	while (*str)
 	{
 		*p++ = *str++;
 	}
+	
 	*p = '\0';
 	return (src);
 }
