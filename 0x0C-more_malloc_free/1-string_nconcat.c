@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  *string_nconcat - concatenates 2 string with malloc
  * @s1: first string
