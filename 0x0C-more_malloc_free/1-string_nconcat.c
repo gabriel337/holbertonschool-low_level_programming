@@ -1,57 +1,47 @@
 #include "main.h"
 
 
-/*
- *
- *
+/**
+ *string_nconcat - concatenates 2 string with malloc
+ * @s1: first string
+ * @s2: second string
+ * @n: number of bytes
+ * Return: returns strings
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-
 	unsigned int i, j = 0;
-
 	char *ptr;
 
-
-	if(s1 == NULL && s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 	{
 		return ("");
 	}
 
-	ptr = malloc(sizeof(char)* j + 1);
-
-	for (i = 0; s1[i] != '\0'; i++, j++)
-
-	{
+	for (i = 0; s1[i] != '\0'; i++)
 		;
 
-	}
-
-
-	for (j = 0; s2[j] != '\0' && i < n; i++,  j++)
-	{
-		
+	for (j = 0; s2[j] != '\0' && j < n; j++)
 		;
-	}
-	
-	ptr = malloc(sizeof(char) * j + 1);
-	if(ptr == NULL)
+
+	ptr = malloc(sizeof(char) * (i + j + 1));
+
+	if (ptr == NULL)
 	{
-	return(NULL);
+		return (NULL);
 	}
-	m[j] = '\0';
 
-for (i = 0; s1[i] != '\0'; i++, j++)
-{
-ptr[j] = s1[i];
+	ptr[j + i + 1] = '\0';
 
-}
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		ptr[i] = s1[i];
+	}
 
-for (i = 0; s2[i] != '\0' && i < n; i++, j++)
-{
-ptr[j] = s2[i];
-}
+	for (j = 0; s2[j] != '\0' && j < n; i++, j++)
+	{
+		ptr[i] = s2[j];
+	}
 
-	return(ptr);
-
+	return (ptr);
 }
