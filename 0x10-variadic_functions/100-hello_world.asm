@@ -11,4 +11,3 @@ main:     mov       rax, 1                  ; system call for write
           mov       rax, 60                 ; system call for exit
           xor       rdi,  0                 ; exit code 0
           syscall                           ; invoke operating system to exit
-
