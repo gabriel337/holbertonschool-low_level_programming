@@ -8,7 +8,7 @@ main:
           mov       rdx, 13                 ; number of bytes
           syscall                           ; invoke operating system to do the write
           mov       rax, 60                 ; system call for exit
-          xor       rdi,  0                 ; exit code 0
+          xor       rdi,  rdi                 ; exit code 0
           syscall                           ; invoke operating system to exit
 message:
           db        "Hello, World", 10
