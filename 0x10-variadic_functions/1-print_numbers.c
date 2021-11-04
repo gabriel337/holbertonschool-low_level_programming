@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		result = va_arg(numberList, unsigned int);
 		printf("%d", result);
 
-		if ((count + 1) != n && *separator != '\0')
+		if ((count + 1) != n && separator != NULL)
 		{
 			printf("%s", separator);
 
