@@ -1,5 +1,10 @@
 #include "3-calc.h"
 
+/**
+ *get_op_func - selection of function
+ *@s: string passed
+ *Return: returns integer
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	int i = 0;
@@ -13,11 +18,11 @@ int (*get_op_func(char *s))(int, int)
 		{NULL, NULL}
 	};
 
-	while(ops[i].op != NULL)
+	while (ops[i].op != NULL)
 	{
 		if ((*ops[i].op) == *s)
 		{
-			return(ops[i].f);
+			return (ops[i].f);
 		}
 		i++;
 	}

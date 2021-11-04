@@ -1,5 +1,11 @@
 #include "3-calc.h"
 
+/**
+ * main - call functions of operators
+ * @argc: argument counts
+ * @argv: argument value
+ * Return: return 0
+ */
 int main(int argc, char **argv)
 {
 int number1, number2;
