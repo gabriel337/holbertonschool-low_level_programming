@@ -1,9 +1,8 @@
-section   .data
-          message: db "Hello, World", 10 ; note the newline at the end
-section   .text
-          global main
+          global    main
 
-main:     mov       rax, 1                  ; system call for write
+          section   .text
+main:
+          mov       rax, 1                  ; system call for write
           mov       rdi, 1                  ; file handle 1 is stdout
           mov       rsi, message            ; address of string to output
           mov       rdx, 13                 ; number of bytes
@@ -11,3 +10,5 @@ main:     mov       rax, 1                  ; system call for write
           mov       rax, 60                 ; system call for exit
           xor       rdi,  0                 ; exit code 0
           syscall                           ; invoke operating system to exit
+message:
+          db        "Hello, World", 10
