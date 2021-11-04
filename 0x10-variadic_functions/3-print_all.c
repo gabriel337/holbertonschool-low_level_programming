@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-
 /**
  * print_all - prints all
  * @format: all the formats tpo be printed
@@ -7,7 +6,7 @@
 void print_all(const char * const format, ...)
 {
 
-	int i;
+	int i = 0;
 	va_list list;
 	char *string, *comma = "";
 
@@ -16,8 +15,9 @@ void print_all(const char * const format, ...)
 		printf("\n");
 		return;
 	}
+
 	va_start(list, format);
-	while (format[i])
+	while (format[i] != '\0')
 	{
 		switch (format[i])
 		{
@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 				comma = ", ";
 				break;
 			case 'f':
-				printf("%s%d", comma, va_arg(list, int));
+				printf("%s%f", comma, va_arg(list, double));
 				comma = ", ";
 				break;
 			case 's':
