@@ -1,23 +1,22 @@
 #include "lists.h"
 
 /**
- *
- *
- *
- *
+ * print_list - prints list elements
+ * @h: data
+ * Return: count of elements
  */
 size_t print_list(const list_t *h)
 {
-
-	if(h->str == NULL)
-		printf("[0] (nil)");
-
+	size_t count = 0;
 
 	while (h != NULL)
 	{
-		printf("[%u] %s", h->len, h->str);
-		printf("\n");
+		if (h->str == NULL)
+			printf("[0] (nul)\n");
+		else
+			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
+		count++;
 	}
-	return(2);
+	return (count);
 }
