@@ -29,7 +29,11 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (i);
 }
-
+/**
+ * _strlen - get string length
+ * @s: string being passed
+ * Return: length
+ */
 int _strlen(const char *s)
 {
 	int i;
