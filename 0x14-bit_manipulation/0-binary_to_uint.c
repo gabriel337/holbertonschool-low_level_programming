@@ -12,7 +12,7 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int k = 1, i = 0, len;
 	int c;
 
-	len = strlen(b);
+	len = _strlen(b);
 
 	if (b == NULL)
 		return (0);
@@ -26,5 +26,14 @@ unsigned int binary_to_uint(const char *b)
 			i += k;
 		k *= 2;
 	}
+	return (i);
+}
+
+int _strlen(const char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+		;
 	return (i);
 }
